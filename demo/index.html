@@ -1,0 +1,157 @@
+ <!DOCTYPE html>
+<html>
+<title>Index for Extraction Website</title>
+  <head>
+        <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="nodes/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="nodes/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> -->  <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  </head>
+  
+  <body>
+    <div class="container">
+      <a id="helpButton" style="border-style:none; padding:0px 0px 0px 0px;z-index:1;">
+        <div class="circle" data-toggle="tooltip" title="Help">
+          ?
+        </div>
+      </a>
+      <div class="row">
+        <div class="col-12">
+          <img src="img/Rainbow_Logo_v1.png" alt="ExtrAction Logo - Rainbow Rectangle" id="logo">
+          <textarea id="myTextArea" name="myTextArea" rows="5" placeholder="Paste Email Text Here"></textarea>
+          <br>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6" style="padding-right:2.5px;">
+          <a id="extractButton" class="extractButton">Extract from<br>Text Box</a>
+        </div>
+        <div class="col-6" style="padding-left:2.5px;">
+          <a id="extractFromEmail" class="extractButton">Extract from<br>Page</a>
+        </div>
+      </div>
+
+<!--       <div class="row">
+        <div class="col-12">
+          <h3>Answer</h3>
+          <textarea id="answer" rows="3" cols="30" placeholder="Model Output Appears Here"></textarea>
+        </div>
+      </div> -->
+
+      <div class="row">
+        <div class="col-12">
+          <h3>Action Items</h3>
+        </div>
+      </div>
+
+      <div class="row" id="checklist">
+        <!-- experiment new format -->
+<!-- add dropdown button/right click ideas  -->
+<!--           <div class="col-12">
+            <div class="card card-checklist">
+              <div role="tab" id="item1head" class="tab-checklist">
+                <h3 class="mb-0">
+                  <a name="task" contenteditable="true">Item 1</a>
+                </h3>
+                <a data-toggle="collapse" data-target="#itemUno"></a>
+              </div>
+              <div class="collapse" id="itemUno" data-parent="#checklist">
+                <div class="card-body">
+                  <span>Sender: George Tao</span>
+                  <a href="#">Go to original e-mail.</a>
+                  <a href="#" class="remove">Remove</a>
+                  <a href="#">Mark as spam</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card-checklist">
+              <div role="tab" id="item2head" class="tab-checklist">
+                <h3 class="mb-0">
+                  <a name="task" contenteditable="true">Item 2</a>
+                </h3>
+                <a data-toggle="collapse" data-target="#itemDos"></a>
+              </div>
+              <div class="collapse" id="itemDos" data-parent="#checklist">
+                <div class="card-body">
+                  <span>Sender: George Tao</span>
+                  <a href="#">Go to original e-mail.</a>
+                  <a href="#" class="remove">Remove</a>
+                  <a href="#">Mark as spam</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+<!-- end of experiment -->
+      </div>
+      <div class="row">
+        <div class="col-12 extraButtons">
+          <a id="add-item" class="fa fa-plus square extraButtons-body" data-toggle="tooltip" title="Add an item"></a>
+          <a id="copy-clipboard" class="fa fa-clipboard square extraButtons-body" data-toggle="tooltip" title="Copy to clipboard"></a>
+          <a id="clear-textbox" class="fa fa-eraser square extraButtons-body" data-toggle="tooltip" title="Clear text box"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <input type="checkbox" name="tooltip-toggle" checked>
+          <label>Toggle Tooltip</label>
+        </div>
+      </div>
+    </div>
+
+<!--     <div class="container" id="checklist">
+      <div class="row">
+        <div class="col-8" contenteditable="true">
+          Todo #1.
+        </div>
+        <div class="col-2">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="img/settings.png" alt="Settings">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item">Sender: George Tao</a>
+              <a href="#" class="dropdown-item">Go to original e-mail.</a>
+              <a href="#" class="dropdown-item">Mark as done.</a>
+              <a href="#" class="dropdown-item">Mark as spam.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          Todo #2.
+        </div>
+        <div class="col-2">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="img/settings.png" alt="Settings">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item">Sender: George Tao</a>
+              <a href="#" class="dropdown-item">Go to original e-mail.</a>
+              <a href="#" class="dropdown-item">Mark as done.</a>
+              <a href="#" class="dropdown-item">Mark as spam.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </body>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+  <script src="nodes/jquery/dist/jquery.slim.min.js"></script>
+  <script src="nodes/popper.js/dist/umd/popper.min.js"></script>
+  <script src="nodes/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="popup.js" defer></script>
+</html>
