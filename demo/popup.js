@@ -151,13 +151,13 @@ function summarize(email_text) {
 	  }
 	}
 
-	var cloud_fn_url = 'https://us-central1-sigma-smile-251401.cloudfunctions.net/classify_summarize'
+	var cloud_fn_url = "https://us-west3-extraction-285622.cloudfunctions.net/classifier"
 
 	// console.log(cloud_fn_url);
 
 	const proxyurl = "https://still-lake-34462.herokuapp.com/";
 
-	return fetch("https://still-lake-34462.herokuapp.com/https://us-central1-sigma-smile-251401.cloudfunctions.net/classify_summarize", {
+	return fetch(proxyurl + cloud_fn_url, {
 	    method: 'post',
 	    headers: {
 	      'Accept': 'application/json',
